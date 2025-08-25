@@ -3,7 +3,7 @@
 FundApp is a modern web app to create, browse, and contribute to fundraisers. Built with **React**, **Firebase**, and **Tailwind CSS**, it offers a clean UX, real‑time updates, and **zero platform fees**.
 
 ---
-
+## Folder Structure
 fund-app/
 ├── dist/
 │   ├── assets/
