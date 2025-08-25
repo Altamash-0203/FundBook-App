@@ -4,33 +4,43 @@ FundApp is a modern web app to create, browse, and contribute to fundraisers. Bu
 
 ---
 
-## 📚 Table of Contents
-- [Features](#-features)
-- [Demo Flow](#-demo-flow)
-- [Tech Stack](#-tech-stack)
-- [Prerequisites](#-prerequisites)
-- [Installation](#-installation)
-- [Configuration](#-configuration)
-  - [Firebase Config](#firebase-config)
-  - [Environment Variables](#environment-variables)
-  - [Firebase Realtime Database Rules](#firebase-realtime-database-rules)
-  - [Authentication Providers](#authentication-providers)
-- [Scripts](#-scripts)
-- [Project Structure (Suggested)](#-project-structure-suggested)
-- [Usage](#-usage)
-  - [Create a Fundraiser](#create-a-fundraiser)
-  - [Donate](#donate)
-  - [Comment](#comment)
-- [Data Model](#-data-model)
-- [UI/UX Notes](#-uiux-notes)
-- [Security & Privacy](#-security--privacy)
-- [Deployment](#-deployment)
-  - [Firebase Hosting](#firebase-hosting)
-  - [Vercel or Netlify](#vercel-or-netlify)
-- [Troubleshooting](#-troubleshooting)
-- [Roadmap Ideas](#-roadmap-ideas)
-- [Contributors](#-contributors)
-- [License](#-license)
+## Folder Structure
+fund-app/
+├── dist/
+│   ├── assets/
+│   │   ├── index-B6FIG6hh.css
+│   │   ├── index-DWHh56Eu.js
+│   │   ├── Slider/
+│   │   ├── favicon.png
+│   │   ├── FundBookLogo.png
+│   │   └── index.html
+├── public/
+├── node_modules/
+├── src/
+│   ├── assets/
+│   ├── Components/
+│   │   ├── forms/
+│   │   │   ├── CreateFund.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Signup.jsx
+│   │   ├── BrowseFunds.jsx
+│   │   ├── Footer.jsx
+│   │   ├── FundraiserDetails.jsx
+│   │   ├── Home.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   ├── firebase.js
+│   ├── index.css
+│   ├── index.html
+│   ├── main.jsx
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── README.md
+│   └── vite.config.js
+
 
 ---
 
@@ -76,7 +86,7 @@ FundApp is a modern web app to create, browse, and contribute to fundraisers. Bu
 
 ## ⚙️ Installation
 ```bash
-git clone https://github.com/your-username/fund-app.git
+git clone https://github.com/Altamash-0203/fund-app.git
 cd fund-app
 npm install
 # or
