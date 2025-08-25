@@ -1,32 +1,50 @@
-import React from "react";
-import { LogIn, Search } from 'lucide-react';
+import React, { useState } from "react";
+import { Menu, X, Search } from "lucide-react";
+import { Link } from "react-router-dom";
 
-function Navbar(){
+function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  let status=localStorage.getItem("status")
+  
 
-
-    return(
-        <>
-        
-        <div className="flex justify-between items-center shadow-xs rounded-2xl mt-3 shadow-black">
-               <div>
-                <img  className="h-20 w-30 animate-bounce" src="public/FundBookLogo.png" alt="" />
-               </div>
-               <div className="flex list-none justify-between items-center gap-10">
-                <li className="hover:underline cursor-pointer">Home</li>
-                <li className="hover:underline cursor-pointer"> Fundraisers</li>
-                <div  >
-                    <input className="border text-center p-1  rounded-br-2xl rounded-tl-2xl " type="text" placeholder="Find FundRaiser"/>
-                    <button className="border ml-2 p-1 w-30 hover:bg-gray-200 rounded  ">Search</button>
-                </div>
-               </div>
-               <div>
-                <button className="bg-green-500 text-white p-1 rounded mr-10">Signup</button>
-               </div>
-               
+  return (
+    <nav className="bg-white shadow-md px-4 py-2">
+      <div className="flex justify-between items-center">
+        {/* Logo */}
+        <div>
+          <img className="h-16 animate-pulse" src="/FundBookLogo.png" alt="FundBook Logo" />
         </div>
 
-        </>
-    )
+        {/* Hamburger (Mobile) */}
+        <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+
+        {/* Menu (Desktop) */}
+        <div className="hidden md:flex list-none items-center gap-8">
+          <Link style={{textDecoration:"none"}} to="/"><li className="bg-black text-white p-2 rounded">Home</li></Link>
+          <Link style={{textDecoration:"none"}} to="/browsefunds" className="bg-black text-white p-2 rounded">Fundraisers</Link>
+         <Link style={{textDecoration:"none"}} to="/createfund" className="bg-black text-white p-2 rounded">Create Fundraiser</Link>
+        { !status &&<Link to="/signup" style={{textDecoration:"none"}} className="bg-green-500 text-white p-2 rounded">Signup</Link>}
+        </div>
+      </div>
+
+      {/* Menu (Mobile Dropdown) */}
+      {isOpen && (
+        <div className="md:hidden  mt-4 space-y-4 ">
+          <ul className="p-2 flex flex-col w-40 space-y-2 ">
+             <Link style={{textDecoration:"none"}}  to="/" className="bg-black text-white p-2 rounded">Home</Link> <br />
+          <Link style={{textDecoration:"none"}}  to="/browsefunds" className="bg-black text-white p-2 rounded">Fundraisers</Link> <br />
+          <Link style={{textDecoration:"none"}} to="/createfund" className="bg-black text-white p-2 rounded">Create Fundraiser</Link> <br />
+          </ul>
+          {!status && <Link style={{textDecoration:"none"}} to="/signup" className="bg-green-500 text-white p-2 rounded text-center">Signup</Link>}
+         
+        </div>
+      )}
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
