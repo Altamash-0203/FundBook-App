@@ -2,49 +2,8 @@
 
 FundApp is a modern web app to create, browse, and contribute to fundraisers. Built with **React**, **Firebase**, and **Tailwind CSS**, it offers a clean UX, real‑time updates, and **zero platform fees**.
 
----
-## Folder Structure
-fund-app/
-├── dist/
-│   ├── assets/
-│   │   ├── index-B6FIG6hh.css
-│   │   ├── index-DWHh56Eu.js
-│   │   ├── Slider/
-│   │   ├── favicon.png
-│   │   ├── FundBookLogo.png
-│   │   └── index.html
-├── public/
-├── node_modules/
-├── src/
-│   ├── assets/
-│   ├── Components/
-│   │   ├── forms/
-│   │   │   ├── CreateFund.jsx
-│   │   │   ├── Login.jsx
-│   │   │   ├── Signup.jsx
-│   │   ├── BrowseFunds.jsx
-│   │   ├── Footer.jsx
-│   │   ├── FundraiserDetails.jsx
-│   │   ├── Home.jsx
-│   │   ├── Navbar.jsx
-│   │   ├── App.css
-│   │   ├── App.jsx
-│   ├── firebase.js
-│   ├── index.css
-│   ├── index.html
-│   ├── main.jsx
-│   ├── .gitignore
-│   ├── eslint.config.js
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── README.md
-│   └── vite.config.js
-
-
-
----
-
 ## ✨ Features
+
 - **Create Fundraisers**: Title, description, goal, image.
 - **Browse Fundraisers**: Grid/list of active fundraisers with goals & progress.
 - **Donate**: Real‑time donor list and live total raised (via Firebase).
@@ -54,6 +13,7 @@ fund-app/
 ---
 
 ## 🧭 Demo Flow
+
 1. Sign up or log in.
 2. Click **Create Fundraiser** → fill form → submit.
 3. Open any fundraiser → **Donate** and/or **Comment**.
@@ -62,7 +22,9 @@ fund-app/
 ---
 
 ## 🛠 Tech Stack
+
 **Frontend**
+
 - React.js
 - React Router
 - Tailwind CSS
@@ -71,12 +33,14 @@ fund-app/
 - Vite (typical dev server; port `5173` by default)
 
 **Backend**
+
 - Firebase Authentication
 - Firebase Realtime Database
 
 ---
 
 ## ✅ Prerequisites
+
 - Node.js ≥ 18 and npm ≥ 9 (or Yarn/Pnpm)
 - A Firebase project with:
   - **Authentication** enabled (Email/Password or social providers)
@@ -85,6 +49,7 @@ fund-app/
 ---
 
 ## ⚙️ Installation
+
 ```bash
 git clone https://github.com/Altamash-0203/fund-app.git
 cd fund-app
@@ -113,3 +78,4 @@ npm run lint
 
 Altamash Shaikh
  – Creator & Maintainer
+```
