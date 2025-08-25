@@ -4,7 +4,6 @@ FundApp is a modern web app to create, browse, and contribute to fundraisers. Bu
 
 ---
 
-## Folder Structure
 fund-app/
 ├── dist/
 │   ├── assets/
@@ -40,6 +39,7 @@ fund-app/
 │   ├── package.json
 │   ├── README.md
 │   └── vite.config.js
+
 
 
 ---
